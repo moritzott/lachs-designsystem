@@ -7,6 +7,8 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface LachsButton {
+        "label": string;
+        "type": 'primary' | "secondary" | "tertiary";
     }
     interface LachsLink {
     }
@@ -52,6 +54,8 @@ declare global {
 }
 declare namespace LocalJSX {
     interface LachsButton {
+        "label"?: string;
+        "type"?: 'primary' | "secondary" | "tertiary";
     }
     interface LachsLink {
     }

@@ -1,3 +1,38 @@
 :host {
-  display: block;
+  display: inline-block;
+}
+
+
+button {
+  font-family: 'PT Sans', monospace;
+  font-size: 16px;
+
+  padding:  8px 22px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+
+  &.primary {
+    color: white;
+    background-color: #FA8072;
+    border: 1px solid #FA8072;
+  }
+
+  &:hover.primary {
+    background-color: #d3796f;
+    border-color:  #d3796f;
+  }
+
+  &.secondary {
+    color: rgba(0, 0, 0, 0.813);
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.813);
+  }
+
+  &:hover.secondary {
+    color: darkgray
+  }
+}
+
+button:active {
+  transform: scale(0.96);
 }
