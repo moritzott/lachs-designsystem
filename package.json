@@ -47,14 +47,19 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build.storybook": "storybook build",
     "stencil.help": "stencil --help",
-    "stencil.version": "stencil --version"
+    "stencil.version": "stencil --version",
+    "compodoc.build": "compodoc -p tsconfig.doc.json",
+    "compodoc.build-and-serve": "compodoc -p tsconfig.doc.json -s",
+    "compodoc.serve": "compodoc -s",
+    "doc": "npx compodoc -p tsconfig.json -n 'Stencil app documentation'"
   },
   "dependencies": {
     "@stencil/core": "^4.0.0"
   },
   "devDependencies": {
+    "@compodoc/compodoc": "^1.1.22",
     "@stencil/sass": "^3.0.7",
     "@storybook/addon-essentials": "^7.5.1",
     "@storybook/addon-interactions": "^7.5.1",
