@@ -1,4 +1,7 @@
 import type { Preview } from '@storybook/html';
+import {defineCustomElements} from '../loader';
+
+defineCustomElements();
 
 const preview: Preview = {
   parameters: {

@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default |
-| -------- | --------- | ----------- | -------- | ------- |
-| `label`  | `label`   |             | `string` | `""`    |
+| Property | Attribute | Description | Type                                     | Default     |
+| -------- | --------- | ----------- | ---------------------------------------- | ----------- |
+| `label`  | `label`   |             | `string`                                 | `""`        |
+| `type`   | `type`    |             | `"primary" \| "secondary" \| "tertiary"` | `"primary"` |
 
 
 ----------------------------------------------
