@@ -1,6 +1,6 @@
 export default {
     // this creates a ‘Components’ folder and a ‘MyComponent’ subfolder
-    title: 'Components/Button',
+    title: 'Components/Atoms/Button',
 };
 
 const Template = (args) => `<lachs-button type="${args.type}" label="${args.label}" ></lachs-button>`;
