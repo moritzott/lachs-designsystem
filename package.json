@@ -40,6 +40,10 @@
     "build.log": "stencil build --docs --log",
     "build.prod": "stencil build --docs --prod",
     "start": "stencil build --dev --watch --serve",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major",
     "test": "stencil test --spec --e2e",
     "test.unit": "stencil test --spec",
     "test.e2e": "stencil test --e2e",
@@ -55,7 +59,8 @@
     "compodoc.serve": "compodoc -s"
   },
   "dependencies": {
-    "@stencil/core": "^4.0.0"
+    "@stencil/core": "^4.0.0",
+    "standard-version": "^9.5.0"
   },
   "devDependencies": {
     "@compodoc/compodoc": "^1.1.22",
