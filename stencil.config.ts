@@ -1,7 +1,14 @@
 import { Config } from '@stencil/core';
+import { sass } from '@stencil/sass';
+import tailwind, { tailwindHMR } from 'stencil-tailwind-plugin';
 
 export const config: Config = {
   namespace: 'lachs-designsystem',
+  plugins: [
+    sass(),
+    tailwind(),
+    tailwindHMR(),
+  ],
   outputTargets: [
     {
       type: 'dist',
@@ -21,4 +28,8 @@ export const config: Config = {
   testing: {
     browserHeadless: "new",
   },
+  devServer: {
+    reloadStrategy: 'hmr', // hot module replacement; otherwise 'pageReload', see: https://stenciljs.com/docs/dev-server
+    port: 3333,
+  }
 };

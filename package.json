@@ -1,7 +1,27 @@
 {
   "name": "lachs-designsystem",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "A collection of web components based on the salmon color.",
+  "keywords": [
+    "Lachs",
+    "Salmon",
+    "Color",
+    "Design System",
+    "Web components",
+    "Stencil"
+  ],
+  "author": {
+    "name": "Moritz Ott"
+  },
+  "license": "All rights reserved and belong to the developer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moritzott/lachs-designsystem.git"
+  },
+  "bugs": {
+    "url": "https://github.com/moritzott/lachs-designsystem/issues"
+  },
+  "homepage": "",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.js",
@@ -10,30 +30,49 @@
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/lachs-designsystem/lachs-designsystem.esm.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ionic-team/stencil-component-starter.git"
-  },
   "files": [
     "dist/",
     "loader/"
   ],
   "scripts": {
     "build": "stencil build --docs",
+    "build.watch": "stencil build --docs --watch",
+    "build.log": "stencil build --docs --log",
+    "build.prod": "stencil build --docs --prod",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
+    "test.unit": "stencil test --spec",
+    "test.e2e": "stencil test --e2e",
+    "test.ci": "stencil test --spec --e2e --headless=new",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "generate": "stencil generate",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "stencil.help": "stencil --help",
+    "stencil.version": "stencil --version"
   },
   "dependencies": {
     "@stencil/core": "^4.0.0"
   },
   "devDependencies": {
+    "@stencil/sass": "^3.0.7",
+    "@storybook/addon-essentials": "^7.5.1",
+    "@storybook/addon-interactions": "^7.5.1",
+    "@storybook/addon-links": "^7.5.1",
+    "@storybook/blocks": "^7.5.1",
+    "@storybook/html": "^7.5.1",
+    "@storybook/html-vite": "^7.5.1",
+    "@storybook/testing-library": "^0.2.2",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.11",
     "jest": "^27.5.1",
     "jest-cli": "^27.5.1",
-    "puppeteer": "21.1.1"
-  },
-  "license": "MIT"
+    "puppeteer": "21.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "stencil-tailwind-plugin": "^1.8.0",
+    "storybook": "^7.5.1",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.2.2"
+  }
 }
