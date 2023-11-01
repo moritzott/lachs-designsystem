@@ -1,0 +1,13 @@
+import { Canvas, Meta, Markdown } from "@storybook/blocks";
+import ReadMe from './../readme.md?raw';
+import * as PropertiesStories from './properties.stories';
+
+<Meta of={PropertiesStories} />
+
+Das ist ein Test.
+
+<Canvas of={PropertiesStories.Example} />
+
+# Link 
+
+<Markdown>{ReadMe}</Markdown>
