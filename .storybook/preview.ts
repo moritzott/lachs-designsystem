@@ -1,7 +1,15 @@
 import type { Preview } from '@storybook/html';
+import {defineCustomElements} from '../loader';
+
+defineCustomElements();
 
 const preview: Preview = {
   parameters: {
+    options: {
+      storySort: {
+        order: ['System', 'Guides', 'Components', '*']
+      }
+    },
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {

@@ -1,0 +1,41 @@
+:host {
+  display: inline-block;
+}
+
+
+button {
+  font-family: 'Metropolis', 'PT Sans', monospace;
+  font-size: 14px;
+
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0;
+  padding: 6px 16px;
+  transition: all 0.2s ease;
+
+  &.primary {
+    color: #f4f4f6;
+    background-color: #FA8072;
+    border: 1px solid #FA8072;
+  }
+
+  &:hover.primary {
+    background-color: #bd4c42;
+    border-color:  #bd4c42;
+  }
+
+  &.secondary {
+    color: rgba(0, 0, 0, 0.813);
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.813);
+  }
+
+  &:hover.secondary {
+    color: darkgray
+  }
+}
+
+button:active {
+  transform: scale(0.96);
+}

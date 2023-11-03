@@ -6,6 +6,12 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface LachsButton {
+        "label": string;
+        "type": 'primary' | "secondary" | "tertiary";
+    }
+    interface LachsLink {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -22,6 +28,18 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLLachsButtonElement extends Components.LachsButton, HTMLStencilElement {
+    }
+    var HTMLLachsButtonElement: {
+        prototype: HTMLLachsButtonElement;
+        new (): HTMLLachsButtonElement;
+    };
+    interface HTMLLachsLinkElement extends Components.LachsLink, HTMLStencilElement {
+    }
+    var HTMLLachsLinkElement: {
+        prototype: HTMLLachsLinkElement;
+        new (): HTMLLachsLinkElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,10 +47,18 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "lachs-button": HTMLLachsButtonElement;
+        "lachs-link": HTMLLachsLinkElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface LachsButton {
+        "label"?: string;
+        "type"?: 'primary' | "secondary" | "tertiary";
+    }
+    interface LachsLink {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -48,6 +74,8 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "lachs-button": LachsButton;
+        "lachs-link": LachsLink;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +83,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "lachs-button": LocalJSX.LachsButton & JSXBase.HTMLAttributes<HTMLLachsButtonElement>;
+            "lachs-link": LocalJSX.LachsLink & JSXBase.HTMLAttributes<HTMLLachsLinkElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

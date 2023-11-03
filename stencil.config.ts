@@ -9,6 +9,7 @@ export const config: Config = {
     tailwind(),
     tailwindHMR(),
   ],
+  globalStyle: 'src/global/global.css',
   outputTargets: [
     {
       type: 'dist',

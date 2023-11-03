@@ -40,6 +40,10 @@
     "build.log": "stencil build --docs --log",
     "build.prod": "stencil build --docs --prod",
     "start": "stencil build --dev --watch --serve",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major",
     "test": "stencil test --spec --e2e",
     "test.unit": "stencil test --spec",
     "test.e2e": "stencil test --e2e",
@@ -47,14 +51,19 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build.storybook": "storybook build",
     "stencil.help": "stencil --help",
-    "stencil.version": "stencil --version"
+    "stencil.version": "stencil --version",
+    "compodoc.build": "compodoc -p tsconfig.doc.json",
+    "compodoc.build-and-serve": "compodoc -p tsconfig.doc.json -s",
+    "compodoc.serve": "compodoc -s"
   },
   "dependencies": {
-    "@stencil/core": "^4.0.0"
+    "@stencil/core": "^4.0.0",
+    "standard-version": "^9.5.0"
   },
   "devDependencies": {
+    "@compodoc/compodoc": "^1.1.22",
     "@stencil/sass": "^3.0.7",
     "@storybook/addon-essentials": "^7.5.1",
     "@storybook/addon-interactions": "^7.5.1",
@@ -65,6 +74,9 @@
     "@storybook/testing-library": "^0.2.2",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.11",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint": "^8.52.0",
     "jest": "^27.5.1",
     "jest-cli": "^27.5.1",
     "puppeteer": "21.1.1",
